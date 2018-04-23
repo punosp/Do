@@ -23,6 +23,7 @@ public class Binary_tree_main {
         bt.levelOrderTraversal();
         System.out.println("Inorder traversal");
         bt.inOrderTraversal(bt.root);
-        System.out.println("LCA of 19 and 12 is "+bt.FindLCA(bt.root, 19, 12).data);
+        System.out.println();
+        System.out.println("LCA of 21 and 23 is "+bt.FindLCA(bt.root, 21, 23).data);
     }
 }
