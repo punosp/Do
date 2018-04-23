@@ -9,5 +9,10 @@
  * @author puneet
  */
 public class Node {
-    
+    Node left;
+    Node right;
+    int data;
+    Node(int d){
+        data = d;
+    }
 }
