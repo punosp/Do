@@ -91,20 +91,41 @@ public class Binary_tree
 // Lowest Common ancestor of two nodes in a binary tree.
   public Node FindLCA(Node node, int n1, int n2){
     if(node == null){
+        System.out.println("Node is null");
         return null;
     }
     if(node.data == n1 || node.data == n2){
+        System.out.println("Function Call with "+node.data);
         return node;
     }
+    
+    System.out.println("Function Call With $$$$$$$$$"+node.data);
     
     Node left_lca = FindLCA(node.left, n1, n2);
+    if (left_lca != null)
+    System.out.println("###"+left_lca.data);
+    else
+        System.out.println("left_lca null");
     Node right_lca = FindLCA(node.right, n1, n2);
+    if (right_lca != null)
+    System.out.println("***"+right_lca.data);
+    else
+        System.out.println("right_lca null");
+    
     
     if(left_lca != null && right_lca != null){
+        System.out.println("IF......");
         return node;
     }
     
-    return (left_lca != null) ? left_lca : right_lca;
-    
+    if (left_lca != null){
+        System.out.println("HERE RIGHT LCA IS NULL ");
+        return left_lca;
+    }
+        
+    else {
+        System.out.println("HERE LEFT LCA IS NULL ");
+        return right_lca;
+    }
     }
 }
