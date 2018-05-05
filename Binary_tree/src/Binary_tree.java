@@ -89,6 +89,7 @@ public class Binary_tree
     System.out.print(node.data + ", ");
   }
 // Lowest Common ancestor of two nodes in a binary tree.
+//  Print statements are just to understand recursion.
   public Node FindLCA(Node node, int n1, int n2){
     if(node == null){
         System.out.println("Node is null");
