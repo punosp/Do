@@ -129,4 +129,14 @@ public class Binary_tree
         return right_lca;
     }
     }
+  
+  public int minInBinarySearchTree(Node node){
+      if(node.left == null)
+          return node.data ;
+      
+      while(node.left != null)
+          node = node.left;
+      
+      return node.data;
+  }
 }
